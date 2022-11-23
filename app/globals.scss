@@ -1,0 +1,36 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: #fefae0;
+    background: #1b1e20;
+  }
+}
+
+:root {
+  /* Your default theme */
+  --background: red;
+  --foreground: black;
+}
+
+[data-theme='dark'] body {
+  --bg-color: rgb(240, 46, 46);
+  /* foreground: white; */
+}

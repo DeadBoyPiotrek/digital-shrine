@@ -1,11 +1,12 @@
 'use client';
 
-import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import useToggleTheme from '../useThemeFix';
+import styles from './nav.module.scss';
 export const Nav = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useToggleTheme();
   return (
-    <div>
+    <div className={styles.nav}>
       <ul>
         <li>
           <Link href="/">DIGITAL SHRINE</Link>
