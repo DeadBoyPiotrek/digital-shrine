@@ -1,0 +1,42 @@
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.listItem {
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+.link {
+  overflow: hidden;
+  // display: block;
+  position: relative;
+
+  span {
+    display: block;
+    transition: transform 300ms ease;
+  }
+  &:after {
+    content: attr(data-replace);
+    display: inline;
+    position: absolute;
+    transition: top 300ms ease;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  // animation when hovered
+  &:hover {
+    span {
+      transform: translateY(-100%);
+    }
+
+    &:after {
+      top: 0;
+    }
+  }
+}

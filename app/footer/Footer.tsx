@@ -1,27 +1,33 @@
-// ? 'use client';
-
+'use client';
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillYoutube,
+  AiOutlineMail,
+} from 'react-icons/ai';
+import styles from './Footer.module.scss';
 export const Footer = () => {
   return (
-    <div>
-      <ul>
-        <li>
+    <div className={styles.wrapper}>
+      <ul className={styles.list}>
+        <li className={styles.listItem}>
           <a target={'blank'} href="https://github.com/DeadBoyPiotrek">
-            github
+            <AiFillGithub />
           </a>
         </li>
-        <li>
+        <li className={styles.listItem}>
           <a target={'blank'} href="https://github.com/DeadBoyPiotrek">
-            yt
+            <AiFillYoutube />
           </a>
         </li>
-        <li>
+        <li className={styles.listItem}>
           <a target={'blank'} href="https://github.com/DeadBoyPiotrek">
-            email
+            <AiOutlineMail />
           </a>
         </li>
-        <li>
+        <li className={styles.listItem}>
           <a target={'blank'} href="https://github.com/DeadBoyPiotrek">
-            ig
+            <AiFillInstagram />
           </a>
         </li>
       </ul>

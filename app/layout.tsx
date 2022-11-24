@@ -1,8 +1,8 @@
 import { Cormorant } from '@next/font/google';
 import { Footer } from './footer/Footer';
-import './globals.scss';
 import { Nav } from './nav/Nav';
 import { Providers } from './providers';
+import './styles/globals.scss';
 
 const font = Cormorant();
 
