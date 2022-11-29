@@ -4,7 +4,7 @@ export const NavLinks = () => {
   return (
     <ul className={styles.list}>
       <li className={styles.listItem}>
-        <Link href="/">
+        <Link href="/" className={styles.link}>
           <div data-replace="DIGITAL SHRINE" className={styles.link}>
             <span>DIGITAL SHRINE</span>
           </div>

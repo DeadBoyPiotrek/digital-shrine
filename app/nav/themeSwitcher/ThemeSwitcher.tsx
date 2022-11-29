@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 import useToggleTheme from '../../useThemeFix';
 import styles from './ThemeSwitcher.module.scss';
 ('use client');
@@ -13,7 +14,7 @@ export const ThemeSwitcher = () => {
         whileHover={{ scale: 1.15, transition: { duration: 0.2 } }}
         onClick={setThemeHandler}
       >
-        {theme === 'light' ? '☀️' : '🌚'}
+        {theme === 'light' ? <HiOutlineSun /> : <HiOutlineMoon />}
       </motion.button>
     </div>
   );

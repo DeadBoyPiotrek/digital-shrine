@@ -1,10 +1,10 @@
-import { Cormorant } from '@next/font/google';
+import { Roboto_Mono } from '@next/font/google';
 import { Footer } from './footer/Footer';
 import { Nav } from './nav/Nav';
 import { Providers } from './providers';
 import './styles/globals.scss';
 
-const font = Cormorant();
+const font = Roboto_Mono();
 
 export default function RootLayout({
   children,
