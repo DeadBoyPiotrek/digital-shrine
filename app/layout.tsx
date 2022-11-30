@@ -1,10 +1,12 @@
-import { Roboto_Mono } from '@next/font/google';
+import { Roboto } from '@next/font/google';
 import { Footer } from './footer/Footer';
 import { Nav } from './nav/Nav';
 import { Providers } from './providers';
 import './styles/globals.scss';
 
-const font = Roboto_Mono();
+const font = Roboto({
+  weight: ['400', '500', '700'],
+});
 
 export default function RootLayout({
   children,
@@ -14,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head></head>
-      <body className={`${font.className} `}>
+      <body className={`${font.className}`}>
         <Providers>
           <Nav />
           {children}

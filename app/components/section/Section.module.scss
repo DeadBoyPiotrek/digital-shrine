@@ -1,0 +1,12 @@
+@import '../../../app/styles/common.scss';
+.wrapper {
+  backdrop-filter: blur(60px);
+  background-color: #1b1b24;
+  opacity: 0.9;
+  height: 200px;
+  width: 1000px;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px;
+  color: white;
+}

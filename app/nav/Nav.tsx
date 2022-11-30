@@ -9,6 +9,7 @@ export const Nav = () => {
       <NavLinks />
       <div className={styles.themeSwitcher}>
         <ThemeSwitcher />
+        {/* in progress 😓 */}
       </div>
     </div>
   );
