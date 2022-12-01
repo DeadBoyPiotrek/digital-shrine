@@ -4,30 +4,31 @@ export const NavLinks = () => {
   return (
     <ul className={styles.list}>
       <li className={styles.listItem}>
-        <Link href="/" className={styles.link}>
-          <div data-replace="DIGITAL SHRINE" className={styles.link}>
-            <span>DIGITAL SHRINE</span>
+        <Link href="/" className={styles.actualLink}>
+          <div data-replace="digital-shrine.dev" className={styles.link}>
+            <span>digital-shrine.dev</span>
           </div>
         </Link>
       </li>
+
       <li className={styles.listItem}>
-        <Link href="/frontend">
-          <div data-replace="COOL FRONTEND" className={styles.link}>
-            <span>COOL FRONTEND</span>
+        <Link href="/frontend" className={styles.actualLink}>
+          <div data-replace="Frontend" className={styles.link}>
+            <span>Frontend</span>
           </div>
         </Link>
       </li>
       <li className={styles.listItem}>
         <Link href="/backend">
-          <div data-replace="COOL BACKEND" className={styles.link}>
-            <span>COOL BACKEND</span>
+          <div data-replace="Backend" className={styles.link}>
+            <span>Backend</span>
           </div>
         </Link>
       </li>
       <li className={styles.listItem}>
         <Link href="/about-me">
-          <div data-replace="ABOUT ME" className={styles.link}>
-            <span>ABOUT ME</span>
+          <div data-replace="O mnie" className={styles.link}>
+            <span>O mnie</span>
           </div>
         </Link>
       </li>

@@ -1,18 +1,26 @@
+@import '../../styles/common.scss';
 .list {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  > li:first-child {
+    margin-right: 300px;
+    font-size: 1.5rem;
+    color: $mainBlue;
+  }
 }
 .listItem {
   margin: 0 20px;
-  font-size: 1.2rem;
+  // font-size: 1.2rem;
 }
-
+.actualLink {
+  background: green;
+}
 .link {
-  overflow: hidden;
-  // display: block;
   position: relative;
+  overflow: hidden;
 
   span {
     display: block;
@@ -20,13 +28,14 @@
   }
   &:after {
     content: attr(data-replace);
-    display: inline;
+    // display: inline;
     position: absolute;
     transition: top 300ms ease;
     top: 100%;
     left: 0;
     right: 0;
     text-align: center;
+    background: pink;
   }
 
   // animation when hovered
@@ -39,8 +48,4 @@
       top: 0;
     }
   }
-}
-
-.link {
-  // background: red;
 }
