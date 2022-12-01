@@ -1,3 +1,4 @@
+@import './styles/common.scss';
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -5,10 +6,23 @@
   align-items: center;
 }
 
-.splineBg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
+.main {
+  display: flex;
+  h1 {
+    font-weight: 400;
+    word-spacing: 1px;
+    // line-height: 2rem;
+  }
+}
+.bold {
+  font-weight: bold;
+}
+.blue {
+  color: $mainBlue;
+}
+.red {
+  color: $mainRed;
+}
+.strikethrough {
+  text-decoration: line-through;
 }

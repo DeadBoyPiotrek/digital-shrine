@@ -14,9 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html className={font.className} lang="en">
       <head></head>
-      <body className={`${font.className}`}>
+      <body>
         <Providers>
           <Nav />
           {children}

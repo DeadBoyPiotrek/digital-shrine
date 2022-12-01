@@ -1,5 +1,5 @@
 'use client';
-// import Spline from '@splinetool/react-spline';
+import Spline from '@splinetool/react-spline';
 // import useToggleTheme from '../useThemeFix';
 import styles from './SplineBg.module.scss';
 export const SplineBg = () => {
@@ -12,6 +12,7 @@ export const SplineBg = () => {
       ) : (
         <Spline scene="https://prod.spline.design/6osQtcetEnyX3vNI/scene.splinecode" />
       )} */}
+      <Spline scene="https://prod.spline.design/Asi8rpyNwVtZeHU2/scene.splinecode" />
     </div>
   );
 };
