@@ -27,8 +27,8 @@ export const NavLinks = () => {
       </li>
       <li className={styles.listItem}>
         <Link href="/about-me">
-          <div data-replace="O mnie" className={styles.link}>
-            <span>O mnie</span>
+          <div data-replace="About" className={styles.link}>
+            <span>About</span>
           </div>
         </Link>
       </li>

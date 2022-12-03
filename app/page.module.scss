@@ -1,19 +1,36 @@
 @import './styles/common.scss';
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  //   justify-content: center;
-  align-items: center;
 }
 
 .main {
   display: flex;
-  h1 {
-    font-weight: 400;
-    word-spacing: 1px;
-    // line-height: 2rem;
+  position: relative;
+
+  width: 100%;
+
+  &Right {
+    position: absolute;
+    width: 100%;
+
+    h1 {
+      font-weight: 400;
+      position: absolute;
+      left: 10%;
+      top: 10%;
+      z-index: 2;
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-weight: 400;
+      position: absolute;
+      left: 10%;
+      top: 45%;
+      z-index: 2;
+      font-size: 1.5rem;
+    }
   }
 }
+
 .bold {
   font-weight: bold;
 }

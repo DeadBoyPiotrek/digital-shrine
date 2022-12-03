@@ -29,6 +29,7 @@ const frontend = async () => {
   return (
     <div>
       <h1>Frontend</h1>
+      lol
       {JSON.stringify(posts)}
     </div>
   );
