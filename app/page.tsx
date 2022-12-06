@@ -30,7 +30,7 @@ const page = () => {
             <span className={styles.bold}> Frontend </span>
             and<span className={styles.bold}> Backend </span>
             pages. <br />
-            Who knows, maybe you'll even like something.
+            Who knows, maybe you&apos;ll even like something.
           </h2>
           <SplineBg />
         </div>

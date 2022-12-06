@@ -1,13 +1,6 @@
 @import './styles/common.scss';
-.wrapper {
-}
 
 .main {
-  display: flex;
-  position: relative;
-
-  width: 100%;
-
   &Right {
     position: absolute;
     width: 100%;

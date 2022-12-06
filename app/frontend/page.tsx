@@ -1,10 +1,17 @@
 import { gql, GraphQLClient } from 'graphql-request';
-
+import { AllPosts } from './components/AllPosts';
+import { LatestPost } from './components/LatestPost';
+import styles from './page.module.scss';
 const query = gql`
   query {
     posts {
       id
       title
+      content
+      datePublished
+      img {
+        url
+      }
     }
   }
 `;
@@ -27,10 +34,13 @@ const frontend = async () => {
   const posts = await getPosts();
 
   return (
-    <div>
-      <h1>Frontend</h1>
-      lol
-      {JSON.stringify(posts)}
+    <div className={styles.wrapper}>
+      <main className={styles.main}>
+        <h1>Frontend</h1>
+        {JSON.stringify(posts)}
+        <LatestPost latestPostData={posts[0]} />
+        <AllPosts frontendPostsData={posts} />
+      </main>
     </div>
   );
 };
