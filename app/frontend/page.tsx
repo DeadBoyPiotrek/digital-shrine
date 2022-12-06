@@ -38,7 +38,9 @@ const frontend = async () => {
       <main className={styles.main}>
         <h1>Frontend</h1>
         {JSON.stringify(posts)}
+        {/* @ts-ignore */}
         <LatestPost latestPostData={posts[0]} />
+        {/* @ts-ignore */}
         <AllPosts frontendPostsData={posts} />
       </main>
     </div>

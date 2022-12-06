@@ -5,15 +5,17 @@ export const LatestPost = ({
   title,
   content,
   date,
-  imgURL,
+  img,
   dateCreated,
 }: PostProps) => {
+  console.log('img', img);
+  console.log('date', date);
   return (
     <div className={styles.wrapper}>
       {title}
       <div>{content}</div>
       <div>{date}</div>
-      <div>{imgURL}</div>
+      {/* <div>{img.url}</div> */}
       <div>{dateCreated}</div>
     </div>
   );
