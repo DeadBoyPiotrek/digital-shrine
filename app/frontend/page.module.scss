@@ -4,43 +4,11 @@
   align-items: center;
   justify-content: center;
   h1 {
-    margin-top: 2rem;
+    margin: 2rem 0;
     font-size: 5rem;
   }
 }
 
 .main {
   width: 60%;
-}
-
-.latestPost {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  h2 {
-    font-size: 3rem;
-    margin-top: 2rem;
-  }
-  .post {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-    .postTitle {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .postContent {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .postDate {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-  }
 }

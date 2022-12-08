@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.image {
+  line-height: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.text {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .datePublished {
+    font-size: 0.75rem;
+  }
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .excerpt {
+  }
+}

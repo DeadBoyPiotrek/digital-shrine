@@ -13,6 +13,11 @@ const nextConfig = {
       },
     ],
   },
+  images: {
+    domains: ['media.graphassets.com'],
+  },
 };
 
 module.exports = nextConfig;
+
+// http://localhost:3000/(https://media.graphassets.com/k2CuHdLbRsSfAn6MPQFF)

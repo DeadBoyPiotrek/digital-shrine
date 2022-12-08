@@ -1,10 +1,14 @@
+import { getLatestPostPreview } from '../lib/hygraphHelpers';
 import { SplineBg } from './components/SplineBg';
+import { LatestPost } from './frontend/components/latestPost/LatestPost';
 import styles from './page.module.scss';
-const page = () => {
+const indexPage = async () => {
+  const post = await getLatestPostPreview();
+
   return (
     <div className={styles.wrapper}>
       <main className={styles.main}>
-        <div className={styles.mainRight}>
+        <div className={styles.welcomeSection}>
           <h1>
             Making <span className={styles.bold}>internet</span> <br />a{' '}
             <span className={styles.strikethrough}>worst</span> better <br />
@@ -32,11 +36,14 @@ const page = () => {
             pages. <br />
             Who knows, maybe you&apos;ll even like something.
           </h2>
+        </div>
+        <div className={styles.spline}>
           <SplineBg />
         </div>
+        <LatestPost latestPostData={post} />
       </main>
     </div>
   );
 };
 
-export default page;
+export default indexPage;
