@@ -1,6 +1,6 @@
 import { getAllPostsPreviews } from '../../lib/hygraphHelpers';
-import { AllPosts } from './components/allPosts/AllPosts';
-import { LatestPost } from './components/latestPost/LatestPost';
+import { AllPosts } from '../components/allPosts/AllPosts';
+import { LatestPost } from '../components/latestPost/LatestPost';
 import styles from './page.module.scss';
 
 const frontendPage = async () => {

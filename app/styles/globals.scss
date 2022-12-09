@@ -6,7 +6,12 @@ body {
   font-size: 18px;
   // font-weight: 500;
   //? resources heavy ?
-  // transition: all 300ms ease;
+  transition: all 100ms ease;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 a {

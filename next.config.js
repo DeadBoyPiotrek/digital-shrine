@@ -14,7 +14,7 @@ const nextConfig = {
     ],
   },
   images: {
-    domains: ['media.graphassets.com'],
+    domains: ['media.graphassets.com', 'avatars.githubusercontent.com'],
   },
 };
 

@@ -1,6 +1,6 @@
 import { getLatestPostPreview } from '../lib/hygraphHelpers';
-import { SplineBg } from './components/SplineBg';
-import { LatestPost } from './frontend/components/latestPost/LatestPost';
+import { LatestPost } from './components/latestPost/LatestPost';
+import { SplineBg } from './components/spline/SplineBg';
 import styles from './page.module.scss';
 const indexPage = async () => {
   const post = await getLatestPostPreview();
@@ -40,7 +40,9 @@ const indexPage = async () => {
         <div className={styles.spline}>
           <SplineBg />
         </div>
-        <LatestPost latestPostData={post} />
+        <div className={styles.latestPost}>
+          <LatestPost latestPostData={post} />
+        </div>
       </main>
     </div>
   );

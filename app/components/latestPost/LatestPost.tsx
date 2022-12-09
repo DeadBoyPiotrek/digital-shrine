@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { dateToLongMonthFormat } from '../../../../lib/helpers';
-import { PostProps } from '../../../../types/types';
+import { dateToLongMonthFormat } from '../../../lib/helpers';
+import { PostProps } from '../../../types/types';
 import styles from './LatestPost.module.scss';
 export const LatestPost = ({
   latestPostData: { title, excerpt, datePublished, img },

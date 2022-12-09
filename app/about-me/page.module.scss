@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  overflow: hidden;
+  margin: 2rem 0 1rem 0;
+  img {
+    margin-top: -10px;
+  }
+}

@@ -1,6 +1,6 @@
-import { AllPostsProps } from '../../../../types/types';
+import { AllPostsProps } from '../../../types/types';
+import { SmallPost } from '../smallPost/SmallPost';
 import styles from './AllPosts.module.scss';
-import { SmallPost } from './smallPost/SmallPost';
 export const AllPosts = ({
   frontendPostsData,
 }: {
