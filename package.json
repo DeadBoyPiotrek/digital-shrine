@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@mdx-js/react": "^2.1.5",
     "@next/font": "^13.0.4",
     "@splinetool/react-spline": "^2.2.1",
     "@splinetool/runtime": "^0.9.148",
@@ -20,7 +21,8 @@
     "eslint-config-next": "13.0.4",
     "framer-motion": "^7.6.12",
     "graphql-request": "^5.0.0",
-    "next": "13.0.4",
+    "gray-matter": "^4.0.3",
+    "next": "^13.0.6",
     "next-mdx-remote": "^4.2.0",
     "next-themes": "npm:@wits/next-themes@^0.2.12",
     "react": "18.2.0",
@@ -32,6 +34,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
+    "encoding": "^0.1.13",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.2",
     "prettier": "^2.7.1"

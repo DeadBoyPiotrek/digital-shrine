@@ -78,3 +78,20 @@ export const getLatestPostPreview = async () => {
     console.log(`🚀 ~ getPosts ~ error`, error);
   }
 };
+
+export const getAllSlugs = async () => {
+  const query = gql`
+    query AllPostsPreviews {
+      posts {
+        slug
+      }
+    }
+  `;
+
+  try {
+    const { posts } = await hygraph.request(query);
+    return posts;
+  } catch (error) {
+    console.log(`🚀 ~ getPosts ~ error`, error);
+  }
+};

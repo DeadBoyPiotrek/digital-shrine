@@ -1,8 +1,8 @@
+'use client';
 import { motion } from 'framer-motion';
 import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 import useToggleTheme from '../../../../lib/useThemeFix';
 import styles from './ThemeSwitcher.module.scss';
-('use client');
 export const ThemeSwitcher = () => {
   const { theme, setTheme } = useToggleTheme();
   const setThemeHandler = () => {
