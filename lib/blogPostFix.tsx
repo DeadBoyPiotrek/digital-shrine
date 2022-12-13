@@ -14,9 +14,18 @@ const ResponsiveImage = (props: any) => {
   );
 };
 
+const RedText = (props: any) => {
+  return <span style={{ color: 'blue' }}>{props.children}</span>;
+};
+
+const h2 = (props: any) => {
+  return <h2 style={{ color: 'red' }}>{props.children}</h2>;
+};
+const shortcodes = { img: ResponsiveImage, RedText, h2 };
+
 export default function MDXContent({ source }: MDXContentProps) {
   return (
-    <MDXProvider components={{ img: ResponsiveImage }}>
+    <MDXProvider components={shortcodes}>
       <MDXRemote {...source} />
     </MDXProvider>
   );

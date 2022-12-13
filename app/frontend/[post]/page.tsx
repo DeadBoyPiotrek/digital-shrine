@@ -1,5 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
+
 import { serialize } from 'next-mdx-remote/serialize';
 import Image from 'next/image';
 import MDXContent from '../../../lib/blogPostFix';
@@ -22,9 +23,11 @@ const postPage = async ({ params }: { params: { post: string } }) => {
   const post: PostProps = await getSinglePost(params.post);
 
   const { content } = matter(markdownPost);
-  const source = await serialize(content);
+  const source = await serialize(content, {
+    mdxOptions: {},
+  });
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <main className={styles.main}>
         <div className={styles.title}>
           <h1>{post.title}</h1>

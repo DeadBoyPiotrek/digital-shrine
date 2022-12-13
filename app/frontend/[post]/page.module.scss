@@ -1,5 +1,5 @@
 @import '../../styles/common';
-.container {
+.wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -7,6 +7,7 @@
 
 .main {
   width: 50%;
+  font-size: 20px;
 }
 .title {
   color: $mainRed;
