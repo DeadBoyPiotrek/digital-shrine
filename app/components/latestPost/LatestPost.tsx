@@ -9,8 +9,8 @@ export const LatestPost = ({
   latestPostData: PostProps;
 }) => {
   return (
-    <div className={styles.wrapper}>
-      <Link href={`/frontend/${slug}`}>
+    <Link href={`/frontend/${slug}`}>
+      <div className={styles.wrapper}>
         <div className={styles.image}>
           <Image src={img.url} alt={title} width={600} height={400} />
         </div>
@@ -23,7 +23,7 @@ export const LatestPost = ({
           </div>
           <div className={styles.excerpt}>{<p>{excerpt}</p>}</div>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
