@@ -5,10 +5,12 @@ const hygraphApiKey = process.env.NEXT_PUBLIC_HYGRAPH_API_KEY;
 // @ts-ignore:
 const hygraph = new GraphQLClient(hygraphApiKey);
 
-export const getAllPostsPreviews = async () => {
+type Category = 'frontend' | 'backend';
+
+export const getAllPostsPreviews = async (category: Category) => {
   const query = gql`
-    query AllPostsPreviews {
-      posts {
+    query AllPostsPreviews($category: String) {
+      posts(orderBy: datePublished_DESC, where: { category: $category }) {
         id
         title
         slug
@@ -22,12 +24,13 @@ export const getAllPostsPreviews = async () => {
   `;
 
   try {
-    const { posts } = await hygraph.request(query);
+    const { posts } = await hygraph.request(query, { category });
     return posts;
   } catch (error) {
     console.log(`🚀 ~ getPosts ~ error`, error);
   }
 };
+
 export const getSinglePost = async (slug: string) => {
   const query = gql`
     query SinglePost($slug: String) {
@@ -58,7 +61,7 @@ export const getSinglePost = async (slug: string) => {
 export const getLatestPostPreview = async () => {
   const query = gql`
     query LatestPostPreview {
-      posts(first: 1) {
+      posts(orderBy: datePublished_DESC, first: 1) {
         title
         slug
         excerpt

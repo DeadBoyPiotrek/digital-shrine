@@ -1,11 +1,6 @@
 @import './styles/common.scss';
 
-.wrapper {
-  // background: yellow;
-}
-
 .main {
-  justify-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;

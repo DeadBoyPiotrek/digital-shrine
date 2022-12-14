@@ -1,12 +1,14 @@
 .wrapper {
   display: flex;
   margin-bottom: 4rem;
+  max-width: 1200px;
 }
 
 .image {
   line-height: 0;
   border-radius: 10px;
   overflow: hidden;
+  width: 100%;
 }
 
 .text {

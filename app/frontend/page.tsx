@@ -4,7 +4,7 @@ import { LatestPost } from '../components/latestPost/LatestPost';
 import styles from './page.module.scss';
 
 const frontendPage = async () => {
-  const posts = await getAllPostsPreviews();
+  const posts = await getAllPostsPreviews('frontend');
 
   return (
     <div className={styles.wrapper}>

@@ -3,19 +3,13 @@
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote';
 import Image from 'next/image';
+// import { Heading2 } from '../app/components/mdx/MdxComponents';
 
 interface MDXContentProps {
   source: MDXRemoteProps;
 }
 
-const RedText = (props: any) => {
-  return <span style={{ color: 'blue' }}>{props.children}</span>;
-};
-
-const h2 = (props: any) => {
-  return <h2 style={{ color: 'red' }}>{props.children}</h2>;
-};
-const shortcodes = { Image, RedText, h2 };
+const shortcodes = { Image };
 
 export default function MDXContent({ source }: MDXContentProps) {
   return (
