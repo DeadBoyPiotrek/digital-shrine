@@ -27,8 +27,8 @@ const indexPage = async () => {
             <span className={`${styles.blue} ${styles.bold}`}>
               Digital Shrine
             </span>{' '}
-            is all about creating{' '}
-            <span className={styles.red}>cool things.</span>
+            is a <span className={styles.red}>blog </span>
+            I guess?
             <br />
             Take a look at
             <span className={styles.bold}> Frontend </span>
