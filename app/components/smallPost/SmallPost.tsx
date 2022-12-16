@@ -5,7 +5,7 @@ import { PostPreviewProps } from '../../../types/types';
 import styles from './SmallPost.module.scss';
 export const SmallPost = ({ post }: { post: PostPreviewProps }) => {
   return (
-    <Link href={`/frontend/${post.slug}`}>
+    <Link href={`/blog/${post.slug}`}>
       <div className={styles.wrapper}>
         <div className={styles.image}>
           <Image

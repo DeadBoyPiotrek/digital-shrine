@@ -9,7 +9,7 @@ export const LatestPost = ({
   latestPostData: PostProps;
 }) => {
   return (
-    <Link href={`/frontend/${slug}`}>
+    <Link href={`/blog/${slug}`}>
       <div className={styles.wrapper}>
         <div className={styles.image}>
           <Image
