@@ -8,12 +8,33 @@
 .main {
   max-width: 960px;
   font-size: 20px;
-  code {
-    border-radius: 5px;
-  }
+
   h2 {
     font-size: 1.8rem;
-    color: $mainBlue;
+    color: $mainRed;
     margin: 1rem 0;
+  }
+  pre {
+    code {
+      border-radius: 5px;
+      background: #282c34;
+    }
+  }
+  code {
+    border-radius: 2px;
+    background-color: $mainBlue;
+    padding: 0 0.2rem;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      text-decoration: none;
+    }
+  }
+  a {
+    text-decoration: underline;
   }
 }
