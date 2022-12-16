@@ -12,7 +12,13 @@ export const LatestPost = ({
     <Link href={`/frontend/${slug}`}>
       <div className={styles.wrapper}>
         <div className={styles.image}>
-          <Image src={img.url} alt={title} width={1920 / 4} height={1080 / 4} />
+          <Image
+            src={img.url}
+            alt={title}
+            width={1920 / 4}
+            height={1080 / 4}
+            quality={100}
+          />
         </div>
         <div className={styles.text}>
           <div className={styles.datePublished}>

@@ -5,17 +5,24 @@ import { PostPreviewProps } from '../../../types/types';
 import styles from './SmallPost.module.scss';
 export const SmallPost = ({ post }: { post: PostPreviewProps }) => {
   return (
-    <div className={styles.wrapper}>
-      <Link href={`/frontend/${post.slug}`}>
+    <Link href={`/frontend/${post.slug}`}>
+      <div className={styles.wrapper}>
         <div className={styles.image}>
-          <Image src={post.img.url} alt={post.title} width={300} height={200} />
+          <Image
+            src={post.img.url}
+            alt={post.title}
+            width={960}
+            height={540}
+            quality={100}
+          />
         </div>
+
         <div>{dateToLongMonthFormat(post.datePublished)}</div>
         <div className={styles.title}>
           <h3>{post.title}</h3>
         </div>
         <div className={styles.excerpt}>{<p>{post.excerpt}</p>}</div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };

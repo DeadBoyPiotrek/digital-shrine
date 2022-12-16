@@ -1,10 +1,10 @@
-import { Roboto } from '@next/font/google';
+import { Poppins } from '@next/font/google';
 import { Footer } from './components/footer/Footer';
 import { Nav } from './components/nav/Nav';
 import { Providers } from './providers';
 import './styles/globals.scss';
 
-const font = Roboto({
+const font = Poppins({
   weight: ['400', '500', '700'],
 });
 

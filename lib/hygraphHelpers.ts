@@ -10,7 +10,10 @@ type Category = 'frontend' | 'backend';
 export const getAllPostsPreviews = async (category: Category) => {
   const query = gql`
     query AllPostsPreviews($category: String) {
-      posts(orderBy: datePublished_DESC, where: { category: $category }) {
+      posts(
+        orderBy: datePublished_DESC
+        where: { category_contains: $category }
+      ) {
         id
         title
         slug

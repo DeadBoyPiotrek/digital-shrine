@@ -1,0 +1,20 @@
+@import '../../styles/common';
+
+.title {
+  color: $mainRed;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+.image {
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.datePublished {
+  margin-bottom: 1rem;
+  background: cornflowerblue;
+  display: inline-block;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
