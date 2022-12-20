@@ -7,10 +7,9 @@ import MDXContent from '../../components/mdx/MdxArticle';
 import { MdxTopSection } from '../../components/mdx/MdxTopSection';
 
 import { getAllSlugs, getSinglePost } from '../../../lib/hygraphHelpers';
-import { PostProps } from '../../../types/types';
 import styles from './page.module.scss';
 export async function generateStaticParams() {
-  const posts = await getAllSlugs();
+  const posts = (await getAllSlugs()) || [];
 
   return posts.map((post: { slug: string }) => {
     return {
@@ -20,26 +19,28 @@ export async function generateStaticParams() {
 }
 
 const postPage = async ({ params }: { params: { post: string } }) => {
-  const post: PostProps = await getSinglePost(params.post);
-  const content = post.content;
+  const post = await getSinglePost(params.post);
+  if (post) {
+    const content = post.content;
 
-  const source = await serialize(content, {
-    mdxOptions: {
-      rehypePlugins: [
-        rehypeSlug,
-        [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-        rehypeHighlight,
-      ],
-    },
-  });
-  return (
-    <div className={styles.wrapper}>
-      <main className={styles.main}>
-        <MdxTopSection post={post} />
-        <MDXContent source={source} />
-      </main>
-    </div>
-  );
+    const source = await serialize(content, {
+      mdxOptions: {
+        rehypePlugins: [
+          rehypeSlug,
+          [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+          rehypeHighlight,
+        ],
+      },
+    });
+    return (
+      <div className={styles.wrapper}>
+        <main className={styles.main}>
+          <MdxTopSection post={post} />
+          <MDXContent source={source} />
+        </main>
+      </div>
+    );
+  }
 };
 
 export default postPage;

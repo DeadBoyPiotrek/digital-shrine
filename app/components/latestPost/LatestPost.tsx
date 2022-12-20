@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { dateToLongMonthFormat } from '../../../lib/helpers';
-import { PostProps } from '../../../types/types';
+import { PostPreviewProps } from '../../../types/types';
 import styles from './LatestPost.module.scss';
 export const LatestPost = ({
-  latestPostData: { title, excerpt, datePublished, img, slug },
+  latestPostData: { slug, img, title, datePublished, excerpt },
 }: {
-  latestPostData: PostProps;
+  latestPostData: PostPreviewProps;
 }) => {
   return (
     <Link href={`/blog/${slug}`}>

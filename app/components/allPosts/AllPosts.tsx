@@ -1,10 +1,10 @@
-import { AllPostsProps } from '../../../types/types';
+import { PostPreviewProps } from '../../../types/types';
 import { SmallPost } from '../smallPost/SmallPost';
 import styles from './AllPosts.module.scss';
 export const AllPosts = ({
   frontendPostsData,
 }: {
-  frontendPostsData: AllPostsProps;
+  frontendPostsData: PostPreviewProps[];
 }) => {
   const [, ...postsWithoutFirst] = frontendPostsData;
   return (

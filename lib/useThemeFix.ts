@@ -1,5 +1,3 @@
-//! temporary fix for next-themes with next 13 😓
-
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 

@@ -1,11 +1,18 @@
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { AllPosts } from '../../app/components/allPosts/AllPosts';
+import { LatestPost } from '../../app/components/latestPost/LatestPost';
 import { getAllPostsPreviews } from '../../lib/hygraphHelpers';
-import { AllPosts } from '../components/allPosts/AllPosts';
-import { LatestPost } from '../components/latestPost/LatestPost';
 import styles from './page.module.scss';
-
-const frontendPage = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = (await getAllPostsPreviews('frontend')) || [];
+  return {
+    props: { posts },
+  };
+};
 
+const frontendPage = ({
+  posts,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className={styles.wrapper}>
       <main className={styles.main}>

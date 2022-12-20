@@ -1,11 +1,16 @@
 'use client';
-import Spline from '@splinetool/react-spline';
+
+import { lazy, Suspense } from 'react';
 
 import styles from './SplineBg.module.scss';
+
+const Spline = lazy(() => import('@splinetool/react-spline'));
 export const SplineBg = () => {
   return (
     <div className={styles.wrapper}>
-      <Spline scene="https://prod.spline.design/Asi8rpyNwVtZeHU2/scene.splinecode" />
+      <Suspense fallback={<></>}>
+        <Spline scene="https://prod.spline.design/Asi8rpyNwVtZeHU2/scene.splinecode" />
+      </Suspense>
     </div>
   );
 };

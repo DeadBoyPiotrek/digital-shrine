@@ -32,6 +32,13 @@ export const NavLinks = () => {
           </div>
         </Link>
       </li>
+      <li className={styles.listItem}>
+        <Link href="/testPage">
+          <div data-replace="About" className={styles.link}>
+            <span>test</span>
+          </div>
+        </Link>
+      </li>
     </ul>
   );
 };

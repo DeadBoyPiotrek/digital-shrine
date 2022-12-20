@@ -21,6 +21,6 @@ export type PostPreviewProps = {
   };
 };
 
-export type AllPostsProps = PostProps[];
+// export type AllPostsProps = PostProps[];
 
-export type AllPostsPreviewsProps = PostPreviewProps[];
+// export type AllPostsPreviewsProps = PostPreviewProps[];

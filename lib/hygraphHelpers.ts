@@ -1,5 +1,5 @@
 import { gql, GraphQLClient } from 'graphql-request';
-
+import { PostPreviewProps, PostProps } from '../types/types';
 const hygraphApiKey = process.env.NEXT_PUBLIC_HYGRAPH_API_KEY;
 //? what can I do to fix this error?
 // @ts-ignore:
@@ -27,14 +27,19 @@ export const getAllPostsPreviews = async (category: Category) => {
   `;
 
   try {
-    const { posts } = await hygraph.request(query, { category });
-    return posts;
+    const { posts: postsPreviews }: { posts: PostPreviewProps[] } =
+      await hygraph.request(query, {
+        category,
+      });
+    return postsPreviews;
   } catch (error) {
     console.log(`🚀 ~ getPosts ~ error`, error);
   }
 };
 
-export const getSinglePost = async (slug: string) => {
+export const getSinglePost = async (
+  slug: string
+): Promise<PostProps | undefined> => {
   const query = gql`
     query SinglePost($slug: String) {
       posts(where: { slug: $slug }) {
@@ -77,7 +82,9 @@ export const getLatestPostPreview = async () => {
   `;
 
   try {
-    const { posts } = await hygraph.request(query);
+    const { posts }: { posts: PostPreviewProps[] } = await hygraph.request(
+      query
+    );
 
     return posts[0];
   } catch (error) {
@@ -95,8 +102,9 @@ export const getAllSlugs = async () => {
   `;
 
   try {
-    const { posts } = await hygraph.request(query);
-    return posts;
+    const { posts: slugs }: { posts: { slug: string }[] } =
+      await hygraph.request(query);
+    return slugs;
   } catch (error) {
     console.log(`🚀 ~ getPosts ~ error`, error);
   }

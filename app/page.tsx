@@ -5,6 +5,10 @@ import styles from './page.module.scss';
 const indexPage = async () => {
   const post = await getLatestPostPreview();
 
+  if (!post) {
+    return <div>Error loading latest Post 😓</div>;
+  }
+
   return (
     <div className={styles.wrapper}>
       <main className={styles.main}>
