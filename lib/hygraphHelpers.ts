@@ -63,7 +63,6 @@ export const getSinglePost = throttle(
 
     try {
       const { posts } = await hygraph.request(query, slugName);
-      console.log('hygraph call');
       return posts[0];
     } catch (error) {
       console.log(`🚀 ~ getPosts ~ error`, error);
