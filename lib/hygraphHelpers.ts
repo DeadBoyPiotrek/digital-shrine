@@ -1,5 +1,7 @@
 import { gql, GraphQLClient } from 'graphql-request';
+import pThrottle from 'p-throttle';
 import { PostPreviewProps, PostProps } from '../types/types';
+
 const hygraphApiKey = process.env.NEXT_PUBLIC_HYGRAPH_API_KEY;
 //? what can I do to fix this error?
 // @ts-ignore:
@@ -37,34 +39,38 @@ export const getAllPostsPreviews = async (category: Category) => {
   }
 };
 
-export const getSinglePost = async (
-  slug: string
-): Promise<PostProps | undefined> => {
-  const query = gql`
-    query SinglePost($slug: String) {
-      posts(where: { slug: $slug }) {
-        slug
-        id
-        title
-        content
-        datePublished
-        excerpt
-        img {
-          url
+//! throttle API calls to prevent exceeding rate limit
+const throttle = pThrottle({ limit: 4, interval: 1000 });
+
+export const getSinglePost = throttle(
+  async (slug: string): Promise<PostProps | undefined> => {
+    const query = gql`
+      query SinglePost($slug: String) {
+        posts(where: { slug: $slug }) {
+          slug
+          id
+          title
+          content
+          datePublished
+          excerpt
+          img {
+            url
+          }
         }
       }
+    `;
+    const slugName = { slug };
+
+    try {
+      const { posts } = await hygraph.request(query, slugName);
+      console.log('hygraph call');
+      return posts[0];
+    } catch (error) {
+      console.log(`🚀 ~ getPosts ~ error`, error);
     }
-  `;
-  const slugName = { slug };
-
-  try {
-    const { posts } = await hygraph.request(query, slugName);
-
-    return posts[0];
-  } catch (error) {
-    console.log(`🚀 ~ getPosts ~ error`, error);
   }
-};
+);
+//! throttle API calls to prevent exceeding rate limit
 
 export const getLatestPostPreview = async () => {
   const query = gql`

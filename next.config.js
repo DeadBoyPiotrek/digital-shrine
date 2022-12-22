@@ -12,6 +12,8 @@ const nextConfig = {
         },
       },
     ],
+    workerThreads: false,
+    cpus: 1,
   },
   images: {
     domains: ['media.graphassets.com', 'avatars.githubusercontent.com'],

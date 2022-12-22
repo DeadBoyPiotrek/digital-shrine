@@ -22,16 +22,22 @@ const postPage = async ({ params }: { params: { post: string } }) => {
   const post = await getSinglePost(params.post);
   if (post) {
     const content = post.content;
-
-    const source = await serialize(content, {
-      mdxOptions: {
-        rehypePlugins: [
-          rehypeSlug,
-          [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-          rehypeHighlight,
-        ],
-      },
-    });
+    let source;
+    try {
+      source = await serialize(content, {
+        mdxOptions: {
+          rehypePlugins: [
+            rehypeSlug,
+            [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+            rehypeHighlight,
+          ],
+        },
+      });
+    } catch (error) {
+      source = await serialize(
+        `error serializing content there is something wrong with markdown`
+      );
+    }
     return (
       <div className={styles.wrapper}>
         <main className={styles.main}>

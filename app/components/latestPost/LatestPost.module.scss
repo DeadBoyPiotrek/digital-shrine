@@ -1,6 +1,5 @@
 .wrapper {
-  max-width: 1200px;
-
+  width: 1200px;
   display: flex;
   margin-bottom: 4rem;
 }
@@ -20,9 +19,6 @@
 .text {
   flex: 1;
   padding: 1rem 1.5rem;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
 
   .datePublished {
     font-size: 0.75rem;
