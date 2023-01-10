@@ -1,9 +1,21 @@
-.wrapper {
-  button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1.4rem;
-  }
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  translate: 0px 3px;
+  overflow: hidden;
+  height: 30px;
+  margin: 0 20px;
+  padding: 0;
+}
+
+.button:hover .main,
+.button:hover .second {
+  transform: translate(0, -30px);
+}
+
+.main,
+.second {
+  transition: transform 0.3s ease-in-out;
 }

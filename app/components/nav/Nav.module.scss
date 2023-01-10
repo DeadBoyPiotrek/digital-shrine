@@ -1,9 +1,32 @@
+@import '../../styles/common.scss';
 .wrapper {
-  margin: 40px;
+  margin: 40px 0px;
 }
 
-.themeSwitcher {
-  position: absolute;
-  right: 40px;
-  top: 42px;
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listItem {
+  margin: 0 20px;
+}
+
+.link {
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  span {
+    display: block;
+  }
+}
+.link:hover .main,
+.link:hover .second {
+  transform: translate(0, -27px);
+}
+
+.main,
+.second {
+  transition: transform 0.3s ease-in-out;
 }

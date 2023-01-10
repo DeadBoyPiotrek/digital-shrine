@@ -9,7 +9,7 @@ export const SplineBg = () => {
   return (
     <div className={styles.wrapper}>
       <Suspense fallback={<></>}>
-        <Spline scene="https://prod.spline.design/Asi8rpyNwVtZeHU2/scene.splinecode" />
+        {/* <Spline scene="https://prod.spline.design/Asi8rpyNwVtZeHU2/scene.splinecode" /> */}
       </Suspense>
     </div>
   );

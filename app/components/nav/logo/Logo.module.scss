@@ -1,0 +1,32 @@
+@import '../../../styles/common.scss';
+.link {
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  span {
+    display: block;
+  }
+
+  font-size: 25px;
+  color: $mainBlue;
+}
+
+.main,
+.second {
+  transition: transform 0.3s ease-in-out;
+}
+.logo {
+  height: 40px;
+}
+.logo:hover .main,
+.logo:hover .second {
+  transform: translate(0, -38px);
+}
+.wrapper {
+  margin: 0 20px;
+  margin-right: 300px;
+  @include media-query-1024 {
+    margin-right: 0;
+    margin: 0 20px;
+  }
+}

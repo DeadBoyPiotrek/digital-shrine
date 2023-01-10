@@ -1,49 +1,33 @@
 @import '../../../styles/common.scss';
-.list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  > li:first-child {
-    margin-right: 300px;
-    font-size: 1.5rem;
-    color: $mainBlue;
-  }
-}
 .listItem {
   margin: 0 20px;
-  // font-size: 1.2rem;
+  @include media-query-1024 {
+    display: none;
+    background: red;
+  }
 }
-.actualLink {
-  background: green;
-}
+
 .link {
   position: relative;
   overflow: hidden;
-
+  height: 30px;
   span {
     display: block;
-    transition: transform 300ms ease;
   }
-  &:after {
-    content: attr(data-replace);
-    // display: inline;
-    position: absolute;
-    transition: top 300ms ease;
-    top: 100%;
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
+}
+.link:hover .main,
+.link:hover .second {
+  transform: translate(0, -27px);
+}
 
-  // animation when hovered
-  &:hover {
-    span {
-      transform: translateY(-100%);
-    }
+.main,
+.second {
+  transition: transform 0.3s ease-in-out;
+}
 
-    &:after {
-      top: 0;
-    }
+.ul {
+  &:nth-child(2) {
+    background-color: red;
   }
 }

@@ -1,37 +1,33 @@
 import Link from 'next/link';
+
 import styles from './NavLinks.module.scss';
 export const NavLinks = () => {
   return (
-    <ul className={styles.list}>
+    <>
       <li className={styles.listItem}>
-        <Link href="/" className={styles.actualLink}>
-          <div data-replace="digital-shrine.dev" className={styles.link}>
-            <span>digital-shrine.dev</span>
-          </div>
-        </Link>
-      </li>
-
-      <li className={styles.listItem}>
-        <Link href="/frontend" className={styles.actualLink}>
-          <div data-replace="Frontend" className={styles.link}>
-            <span>Frontend</span>
+        <Link href="/frontend">
+          <div className={styles.link}>
+            <span className={styles.main}>Frontend</span>
+            <span className={styles.second}>Frontend</span>
           </div>
         </Link>
       </li>
       <li className={styles.listItem}>
         <Link href="/backend">
-          <div data-replace="Backend" className={styles.link}>
-            <span>Backend</span>
+          <div className={styles.link}>
+            <span className={styles.main}>Backend</span>
+            <span className={styles.second}>Backend</span>
           </div>
         </Link>
       </li>
       <li className={styles.listItem}>
         <Link href="/about-me">
-          <div data-replace="About" className={styles.link}>
-            <span>About</span>
+          <div className={styles.link}>
+            <span className={styles.main}>About</span>
+            <span className={styles.second}>About</span>
           </div>
         </Link>
       </li>
-    </ul>
+    </>
   );
 };

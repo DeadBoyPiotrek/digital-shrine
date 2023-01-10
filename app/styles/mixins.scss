@@ -1,16 +1,25 @@
-@mixin small-screens-media-query {
+@mixin media-query-1400 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+@mixin media-query-1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin media-query-1024 {
   @media (max-width: 1024px) {
     @content;
   }
 }
-
-@mixin tablet-media-query {
-  @media (max-width: 768px) {
+@mixin media-query-768 {
+  @media (max-device-width: 768px) {
     @content;
   }
 }
 
-@mixin phone-media-query {
+@mixin media-query-480 {
   @media (max-width: 480px) {
     @content;
   }

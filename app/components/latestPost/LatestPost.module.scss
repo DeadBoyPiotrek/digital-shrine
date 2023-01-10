@@ -1,7 +1,12 @@
+@import '../../styles/common.scss';
 .wrapper {
   width: 1200px;
   display: flex;
   margin-bottom: 4rem;
+  @include media-query-1200 {
+    flex-direction: column;
+    width: 900px;
+  }
 }
 
 .image {
@@ -19,7 +24,6 @@
 .text {
   flex: 1;
   padding: 1rem 1.5rem;
-
   .datePublished {
     font-size: 0.75rem;
   }
@@ -27,5 +31,8 @@
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+  }
+  @include media-query-1200 {
+    padding: 1rem 0;
   }
 }
