@@ -16,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html className={font.className} lang="en">
-      <head></head>
+      <head>
+        <meta name="viewport" content="width=device-width" />
+      </head>
       <body>
         <Providers>
           <Nav />

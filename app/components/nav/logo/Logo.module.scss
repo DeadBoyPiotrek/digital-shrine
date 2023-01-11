@@ -1,4 +1,13 @@
 @import '../../../styles/common.scss';
+.wrapper {
+  margin: 0 20px;
+  margin-right: 300px;
+  @include media-query-1024 {
+    margin-right: 0;
+    margin: 0 20px;
+  }
+}
+
 .link {
   position: relative;
   overflow: hidden;
@@ -9,6 +18,9 @@
 
   font-size: 25px;
   color: $mainBlue;
+  @include media-query-480 {
+    font-size: 0.9rem;
+  }
 }
 
 .main,
@@ -17,16 +29,14 @@
 }
 .logo {
   height: 40px;
+  @include media-query-480 {
+    height: 25px;
+  }
 }
 .logo:hover .main,
 .logo:hover .second {
   transform: translate(0, -38px);
-}
-.wrapper {
-  margin: 0 20px;
-  margin-right: 300px;
-  @include media-query-1024 {
-    margin-right: 0;
-    margin: 0 20px;
+  @include media-query-480 {
+    transform: translate(0, -28px);
   }
 }
