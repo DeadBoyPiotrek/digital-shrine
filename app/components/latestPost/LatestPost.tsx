@@ -9,8 +9,8 @@ export const LatestPost = ({
   latestPostData: PostPreviewProps;
 }) => {
   return (
-    <Link href={`/blog/${slug}`}>
-      <div className={styles.wrapper}>
+    <div className={styles.wrapper}>
+      <Link href={`/blog/${slug}`}>
         <div className={styles.image}>
           <Image
             src={img.url}
@@ -29,7 +29,7 @@ export const LatestPost = ({
           </div>
           <div className={styles.excerpt}>{<p>{excerpt}</p>}</div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };

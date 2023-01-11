@@ -1,6 +1,10 @@
+@import '../../styles/common.scss';
 .wrapper {
   margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  // padding: 40px;
+  @include media-query-1200 {
+    justify-content: center;
+  }
 }

@@ -8,6 +8,12 @@ body {
   //? resources heavy ?
   transition: all 100ms ease;
 }
+
+body {
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+}
 ul {
   padding: 0;
   margin: 0;

@@ -1,6 +1,6 @@
 @import '../../styles/common.scss';
 .wrapper {
-  width: 1200px;
+  width: 1150px;
   display: flex;
   @include media-query-1200 {
     flex-direction: column;

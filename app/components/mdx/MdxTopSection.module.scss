@@ -4,8 +4,16 @@
   color: $mainRed;
   font-size: 2rem;
   margin: 2rem 0;
+  @include media-query-768 {
+    font-size: 1rem;
+  }
 }
 .image {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
   border-radius: 10px;
   overflow: hidden;
   line-height: 0;
