@@ -10,7 +10,11 @@ export const ThemeSwitcher = () => {
   return (
     <li>
       <div className={styles.wrapper}>
-        <button onClick={setThemeHandler} className={styles.button}>
+        <button
+          onClick={setThemeHandler}
+          className={styles.button}
+          aria-label={'theme switcher'}
+        >
           <div className={styles.main}>
             {theme === 'light' ? <HiOutlineMoon /> : <HiOutlineSun />}
           </div>

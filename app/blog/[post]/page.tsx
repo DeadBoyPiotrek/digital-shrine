@@ -39,12 +39,14 @@ const postPage = async ({ params }: { params: { post: string } }) => {
       );
     }
     return (
-      <div className={styles.wrapper}>
-        <main className={styles.main}>
-          <MdxTopSection post={post} />
-          <MDXContent source={source} />
-        </main>
-      </div>
+      <>
+        <div className={styles.wrapper}>
+          <main className={styles.main}>
+            <MdxTopSection post={post} />
+            <MDXContent source={source} />
+          </main>
+        </div>
+      </>
     );
   }
 };

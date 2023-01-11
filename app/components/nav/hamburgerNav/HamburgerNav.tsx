@@ -10,10 +10,12 @@ export const HamburgerNav = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <button onClick={openNavHandler}>
-        <GiHamburgerMenu />
-      </button>
-    </div>
+    <li>
+      <div className={styles.wrapper}>
+        <button onClick={openNavHandler} aria-label={'open menu'}>
+          <GiHamburgerMenu />
+        </button>
+      </div>
+    </li>
   );
 };

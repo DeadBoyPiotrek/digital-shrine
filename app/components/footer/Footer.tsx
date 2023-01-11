@@ -11,22 +11,38 @@ export const Footer = () => {
     <div className={styles.wrapper}>
       <ul className={styles.list}>
         <li className={styles.listItem}>
-          <a target={'blank'} href="https://github.com/DeadBoyPiotrek">
+          <a
+            target={'blank'}
+            href="https://github.com/DeadBoyPiotrek"
+            aria-label={'link to github account'}
+          >
             <AiFillGithub />
           </a>
         </li>
         <li className={styles.listItem}>
-          <a target={'blank'} href="https://github.com/DeadBoyPiotrek">
+          <a
+            target={'blank'}
+            href="https://github.com/DeadBoyPiotrek"
+            aria-label={'link to github account'}
+          >
             <AiFillYoutube />
           </a>
         </li>
         <li className={styles.listItem}>
-          <a target={'blank'} href="https://github.com/DeadBoyPiotrek">
+          <a
+            target={'blank'}
+            href="https://github.com/DeadBoyPiotrek"
+            aria-label={'link to github account'}
+          >
             <AiOutlineMail />
           </a>
         </li>
         <li className={styles.listItem}>
-          <a target={'blank'} href="https://github.com/DeadBoyPiotrek">
+          <a
+            target={'blank'}
+            href="https://github.com/DeadBoyPiotrek"
+            aria-label={'link to github account'}
+          >
             <AiFillInstagram />
           </a>
         </li>
