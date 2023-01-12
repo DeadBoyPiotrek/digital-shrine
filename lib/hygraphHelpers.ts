@@ -33,6 +33,7 @@ export const getAllPostsPreviews = async (category: Category) => {
       await hygraph.request(query, {
         category,
       });
+    // throw new Error('error 😓');
     return postsPreviews;
   } catch (error) {
     console.log(`🚀 ~ getPosts ~ error`, error);

@@ -13,7 +13,7 @@
   padding: 20px;
   h2 {
     font-size: 1.8rem;
-    color: $mainRed;
+    color: var(--mainRed);
     margin: 1rem 0;
   }
   pre {
@@ -25,7 +25,7 @@
   }
   code {
     border-radius: 2px;
-    background-color: $mainBlue;
+    background-color: var(--mainBlue);
     padding: 0 0.2rem;
   }
   h2,

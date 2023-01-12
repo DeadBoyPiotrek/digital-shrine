@@ -17,7 +17,7 @@
   }
 
   font-size: 25px;
-  color: $mainBlue;
+  color: var(--mainBlue);
   @include media-query-480 {
     font-size: 0.9rem;
   }

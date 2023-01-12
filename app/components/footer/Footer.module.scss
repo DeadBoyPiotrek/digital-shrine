@@ -12,5 +12,15 @@
 .listItem {
   margin: 0 10px;
   font-size: 1.5rem;
-  // padding: 10px;
+  transition: all 0.2s ease;
+  &:hover {
+    color: var(--mainBlue);
+  }
+}
+
+.filer {
+  color: gray;
+  &:hover {
+    color: gray;
+  }
 }

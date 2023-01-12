@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  grid-row-gap: 2rem;
   grid-template-areas:
     'welcome cover'
     'latestPost latestPost';
@@ -67,10 +68,10 @@
   font-weight: bold;
 }
 .blue {
-  color: $mainBlue;
+  color: var(--mainBlue);
 }
 .red {
-  color: $mainRed;
+  color: var(--mainRed);
 }
 .strikethrough {
   text-decoration: line-through;

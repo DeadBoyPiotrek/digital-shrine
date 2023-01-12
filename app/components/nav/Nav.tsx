@@ -6,13 +6,13 @@ import { ThemeSwitcher } from './themeSwitcher/ThemeSwitcher';
 
 export const Nav = () => {
   return (
-    <div className={styles.wrapper}>
+    <nav className={styles.wrapper}>
       <ul className={styles.list}>
         <Logo />
         <NavLinks />
         <HamburgerNav />
         <ThemeSwitcher />
       </ul>
-    </div>
+    </nav>
   );
 };

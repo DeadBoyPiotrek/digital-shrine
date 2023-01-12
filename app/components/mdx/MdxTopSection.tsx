@@ -7,12 +7,12 @@ import { PostProps } from '../../../types/types';
 export const MdxTopSection = ({ post }: { post: PostProps }) => {
   return (
     <>
-      <div className={styles.title}>
+      <span className={styles.title}>
         <h1>{post.title}</h1>
-      </div>
-      <div className={styles.datePublished}>
+      </span>
+      <span className={styles.datePublished}>
         {dateToLongMonthFormat(post.datePublished)}
-      </div>
+      </span>
       <div className={styles.image}>
         <Image
           src={post.img.url}

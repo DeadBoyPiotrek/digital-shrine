@@ -4,13 +4,22 @@ import { LatestPost } from '../components/latestPost/LatestPost';
 import styles from './page.module.scss';
 
 const frontendPage = async () => {
-  const posts = (await getAllPostsPreviews('frontend')) || [];
+  const posts = await getAllPostsPreviews('frontend');
+
+  if (!posts) {
+    return <div> error getting posts 😓</div>;
+  }
+  if (posts.length == 0) {
+    return <div> error getting posts 😓</div>;
+  }
 
   return (
     <div className={styles.wrapper}>
       <main className={styles.main}>
         <h1>Frontend</h1>
+
         <LatestPost latestPostData={posts[0]} />
+
         <AllPosts frontendPostsData={posts} />
       </main>
     </div>

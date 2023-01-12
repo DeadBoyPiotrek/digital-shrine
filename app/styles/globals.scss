@@ -1,12 +1,20 @@
 @import 'common.scss';
 
+//* variables
+:root {
+  --mainDark: #1e2023;
+  --mainLight: #fff;
+  --mainBlue: #628ef3;
+  --mainRed: #f87185;
+  // --mainLightBlue: #e5e6ed;
+}
+//* variables
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-size: 18px;
-  //? resources heavy ?
-  transition: all 100ms ease;
 }
 
 body {
@@ -50,10 +58,10 @@ h6 {
 }
 
 [data-theme='dark'] body {
-  background: $mainDark;
-  color: $mainLight;
+  background: var(--mainDark);
+  color: var(--mainLight);
 }
 [data-theme='light'] body {
-  background: $mainLight;
-  color: $mainDark;
+  background: var(--mainLight);
+  color: var(--mainDark);
 }

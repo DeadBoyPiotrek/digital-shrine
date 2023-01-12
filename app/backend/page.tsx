@@ -5,7 +5,12 @@ import styles from './page.module.scss';
 
 const backendPage = async () => {
   const posts = (await getAllPostsPreviews('backend')) || [];
-
+  if (!posts) {
+    return <div> error getting posts 😓</div>;
+  }
+  if (posts.length == 0) {
+    return <div> error getting posts 😓</div>;
+  }
   return (
     <div className={styles.wrapper}>
       <main className={styles.main}>
