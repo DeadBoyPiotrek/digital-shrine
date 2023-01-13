@@ -20,7 +20,3 @@ export type PostPreviewProps = {
     readonly url: string;
   };
 };
-
-// export type AllPostsProps = PostProps[];
-
-// export type AllPostsPreviewsProps = PostPreviewProps[];

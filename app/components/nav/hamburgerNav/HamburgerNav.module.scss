@@ -1,4 +1,4 @@
-@import '../../../styles/common.scss';
+@import '../../../styles/mixins.scss';
 .wrapper {
   display: none;
   @include media-query-1024 {

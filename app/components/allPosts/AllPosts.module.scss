@@ -1,10 +1,9 @@
-@import '../../styles/common.scss';
+@import '../../styles/mixins.scss';
 .wrapper {
   margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
-  // padding: 40px;
-  @include media-query-1200 {
+  @include media-query-1270 {
     justify-content: center;
   }
 }

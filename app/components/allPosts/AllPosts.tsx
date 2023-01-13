@@ -1,12 +1,13 @@
+import { removeFirstPost } from '../../../lib/helpers';
 import { PostPreviewProps } from '../../../types/types';
 import { SmallPost } from '../smallPost/SmallPost';
 import styles from './AllPosts.module.scss';
-export const AllPosts = ({
-  frontendPostsData,
-}: {
+interface FrontendPostsData {
   frontendPostsData: PostPreviewProps[];
-}) => {
-  const [, ...postsWithoutFirst] = frontendPostsData;
+}
+
+export const AllPosts = ({ frontendPostsData }: FrontendPostsData) => {
+  const postsWithoutFirst = removeFirstPost(frontendPostsData);
   return (
     <div className={styles.wrapper}>
       {postsWithoutFirst.map(post => (

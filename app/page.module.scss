@@ -1,4 +1,4 @@
-@import './styles/common.scss';
+@import './styles/mixins.scss';
 
 .main {
   display: grid;
@@ -27,6 +27,7 @@
 
   @include media-query-768 {
     align-items: center;
+    padding: 20px 40px;
   }
 }
 .texts {
@@ -76,18 +77,6 @@
 .strikethrough {
   text-decoration: line-through;
 }
-
-// .spline {
-//   grid-area: spline;
-//   flex-grow: 1;
-//   height: 700px;
-//   @include media-query-1400 {
-//     height: 500px;
-//   }
-//   @include media-query-1024 {
-//     // display: none;
-//   }
-// }
 
 .latestPost {
   grid-area: latestPost;

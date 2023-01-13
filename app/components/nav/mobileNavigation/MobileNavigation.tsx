@@ -1,9 +1,9 @@
 'use client';
 import Link from 'next/link';
-import { useSettings } from '../../../context/settings';
+import { useMobileNavSettings } from '../../../context/mobileNavSettings';
 import styles from './MobileNavigation.module.scss';
 export const MobileNavigation = () => {
-  const { isOpen, setIsOpen } = useSettings();
+  const { isOpen, setIsOpen } = useMobileNavSettings();
 
   const closeNavHandler = () => {
     document.body.style.overflow = 'unset';

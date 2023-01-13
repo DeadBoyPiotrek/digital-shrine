@@ -3,7 +3,6 @@ import pThrottle from 'p-throttle';
 import { PostPreviewProps, PostProps } from '../types/types';
 
 const hygraphApiKey = process.env.NEXT_PUBLIC_HYGRAPH_API_KEY;
-//? what can I do to fix this error?
 // @ts-ignore:
 const hygraph = new GraphQLClient(hygraphApiKey);
 
@@ -33,7 +32,6 @@ export const getAllPostsPreviews = async (category: Category) => {
       await hygraph.request(query, {
         category,
       });
-    // throw new Error('error 😓');
     return postsPreviews;
   } catch (error) {
     console.log(`🚀 ~ getPosts ~ error`, error);

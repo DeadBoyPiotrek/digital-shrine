@@ -18,7 +18,7 @@ export const MdxTopSection = ({ post }: { post: PostProps }) => {
           src={post.img.url}
           width={960}
           height={540}
-          alt=""
+          alt={`cover image for ${post.title} post`}
           quality={100}
         />
       </div>

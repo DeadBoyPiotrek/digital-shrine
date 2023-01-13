@@ -1,12 +1,12 @@
 'use client';
 
 import { ThemeProvider } from 'next-themes';
-import { SettingsProvider } from './context/settings';
+import { MobileNavSettingsProvider } from '../../context/mobileNavSettings';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <SettingsProvider>
+    <MobileNavSettingsProvider>
       <ThemeProvider defaultTheme="dark">{children}</ThemeProvider>
-    </SettingsProvider>
+    </MobileNavSettingsProvider>
   );
 }

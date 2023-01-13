@@ -1,4 +1,4 @@
-@import '../../styles/common.scss';
+@import '../../styles/mixins.scss';
 .wrapper {
   width: 1150px;
   display: flex;
@@ -11,7 +11,7 @@
   }
 
   @include media-query-768 {
-    width: 500px;
+    width: 450px;
   }
   @include media-query-480 {
     width: 300px;
@@ -43,5 +43,10 @@
   }
   @include media-query-1200 {
     padding: 1rem 0;
+  }
+  @include media-query-480 {
+    .title {
+      font-size: 1rem;
+    }
   }
 }

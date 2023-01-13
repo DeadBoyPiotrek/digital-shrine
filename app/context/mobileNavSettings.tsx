@@ -6,7 +6,7 @@ interface Props {
 
 const SettingsContext = createContext<SettingsContextData | null>(null);
 
-export const SettingsProvider: FC<Props> = ({ children }) => {
+export const MobileNavSettingsProvider: FC<Props> = ({ children }) => {
   const value = useProviderSettings();
   return (
     <SettingsContext.Provider value={value}>
@@ -20,7 +20,7 @@ const useProviderSettings = () => {
   return { isOpen, setIsOpen };
 };
 
-export const useSettings = () => {
+export const useMobileNavSettings = () => {
   const settings = useContext(SettingsContext);
   if (!settings) {
     throw new Error('useSettings must be used inside SettingsProvider');

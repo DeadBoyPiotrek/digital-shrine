@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ <div align='center' >
+ <a href="https://digital-shrine.vercel.app/">
+    <img src="public/favicons/android-chrome-192x192.png" alt="Logo" width="192" height="192">
+  </a>
+  </div>
 
-## Getting Started
+## Tools 🛠️
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [![React][react.js]][react-url]
+- [![TypeScript][typescript.ts]][typescript-url]
+- [![Next.js][next.js]][next-url]
+- [![Hygraph][hygraph.svg]][hygraph-url]
+- [![GraphQL][graphql]][graphql-url]
+- [![markdown][markdown]][markdown-url]
+- [MDX](https://mdxjs.com/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. Get a free API Key at https://openweathermap.org
+2. Clone the repo
+   ```sh
+   git clone https://github.com/DeadBoyPiotrek/digital-shrine.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `.env.local`
+   ```js
+   REACT_APP_API_APPID = your_API_Key;
+   ```
+5. Runs the app in the development mode
+   ```sh
+   npm start
+   ```
+   Open http://localhost:3000 to view it in the browser.
+6. Builds the app for production to the build folder
+   ```sh
+   npm run build
+   ```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+[typescript.ts]: https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=3791d2
+[typescript-url]: https://www.typescriptlang.org
+[next.js]: https://img.shields.io/badge/Next.js-20232A?style=for-the-badge&logo=next.js&logoColor=000000
+[next-url]: https://nextjs.org/
+[hygraph.svg]: https://img.shields.io/badge/Hygraph-20232A?style=for-the-badge&logo=Hygraph&logoColor=000000
+[hygraph-url]: https://hygraph.com/?utm_term=hygraph&utm_campaign=EN_GL_Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=2816788452&hsa_cam=17734529757&hsa_grp=138464719243&hsa_ad=610082777931&hsa_src=g&hsa_tgt=kwd-1681477926128&hsa_kw=hygraph&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiAn4SeBhCwARIsANeF9DI_PmhU4JrB32yu90zstilyJBQfv5aBIyr74rRdSsU1Gxi4owD0O8caAgkOEALw_wcB
+[graphql]: https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white
+[graphql-url]: https://graphql.org/
+[markdown]: https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white
+[markdown-url]: https://www.markdownguide.org/

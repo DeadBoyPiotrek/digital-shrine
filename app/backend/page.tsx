@@ -4,7 +4,7 @@ import { LatestPost } from '../components/latestPost/LatestPost';
 import styles from './page.module.scss';
 
 const backendPage = async () => {
-  const posts = (await getAllPostsPreviews('backend')) || [];
+  const posts = await getAllPostsPreviews('backend');
   if (!posts) {
     return <div> error getting posts 😓</div>;
   }
