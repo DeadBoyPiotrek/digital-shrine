@@ -1,10 +1,12 @@
  <div align='center' >
  <a href="https://digital-shrine.vercel.app/">
-    <img src="public/favicons/android-chrome-192x192.png" alt="Logo" width="192" height="192">
+    <img src="public/readme/android-chrome-192x192.png" alt="Logo" width="192" height="192">
   </a>
   </div>
 
 ## Tools 🛠️
+
+#
 
 <br>
 
@@ -16,30 +18,37 @@
 - [![markdown][markdown]][markdown-url]
 - [MDX](https://mdxjs.com/)
 
-### Installation
+  <br/>
 
-1. Get a free API Key at https://openweathermap.org
-2. Clone the repo
+## Installation
+
+#
+
+1. Create free hygraph account at [hygraph.](https://hygraph.com/?utm_term=hygraph&utm_campaign=EN_GL_Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=2816788452&hsa_cam=17734529757&hsa_grp=138464751243&hsa_ad=610082777931&hsa_src=g&hsa_tgt=kwd-1681477926128&hsa_kw=hygraph&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiAwomeBhBWEiwAM43YILtwA8POgpY7YEda5XqewFaKpRzZ-TW9C82IkyXcVOXQN3kq2-fWSxoCL1gQAvD_BwE)
+2. Clone the repository.
    ```sh
    git clone https://github.com/DeadBoyPiotrek/digital-shrine.git
    ```
-3. Install NPM packages
+3. Install NPM packages.
    ```sh
    npm install
    ```
-4. Enter your API in `.env.local`
+4. Enter your API key in `.env.local`
    ```js
-   REACT_APP_API_APPID = your_API_Key;
+   NEXT_PUBLIC_HYGRAPH_API_KEY = 'your api key';
    ```
-5. Runs the app in the development mode
+5. Run the app in the development mode.
    ```sh
-   npm start
+   npm run dev
    ```
-   Open http://localhost:3000 to view it in the browser.
-6. Builds the app for production to the build folder
-   ```sh
-   npm run build
-   ```
+
+#
+
+Add webhooks to automatically build your project on specific action e.g. adding new post. 👍
+
+![vercel hook](./public/readme/vercelHook.png)
+
+![hygraph hook](./public/readme/hygraphHook.jpg)
 
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
