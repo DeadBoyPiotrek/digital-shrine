@@ -16,18 +16,10 @@ export const ThemeSwitcher = () => {
           aria-label={'theme switcher'}
         >
           <div className={styles.main}>
-            {theme === 'light' ? (
-              <HiOutlineMoon data-testid="moon-icon" />
-            ) : (
-              <HiOutlineSun data-testid="sun-icon" />
-            )}
+            {theme === 'light' ? <HiOutlineMoon /> : <HiOutlineSun />}
           </div>
           <div className={styles.second}>
-            {theme === 'dark' ? (
-              <HiOutlineMoon data-testid="moon-icon" />
-            ) : (
-              <HiOutlineSun data-testid="sun-icon" />
-            )}
+            {theme === 'dark' ? <HiOutlineMoon /> : <HiOutlineSun />}
           </div>
         </button>
       </div>

@@ -8,33 +8,35 @@ const hygraph = new GraphQLClient(hygraphApiKey);
 
 type Category = 'frontend' | 'backend';
 
+interface PostsResult {
+  posts: PostPreviewProps[];
+}
+
 export const getAllPostsPreviews = async (category: Category) => {
-  const query = gql`
-    query AllPostsPreviews($category: String) {
-      posts(
-        orderBy: datePublished_DESC
-        where: { category_contains: $category }
-      ) {
-        id
-        title
-        slug
-        excerpt
-        datePublished
-        img {
-          url
+  try {
+    const query = gql`
+      query AllPostsPreviews($category: String) {
+        posts(
+          orderBy: datePublished_DESC
+          where: { category_contains: $category }
+        ) {
+          id
+          title
+          slug
+          excerpt
+          datePublished
+          img {
+            url
+          }
         }
       }
-    }
-  `;
-
-  try {
-    const { posts: postsPreviews }: { posts: PostPreviewProps[] } =
-      await hygraph.request(query, {
-        category,
-      });
+    `;
+    const result: PostsResult = await hygraph.request(query, { category });
+    const { posts: postsPreviews } = result;
     return postsPreviews;
   } catch (error) {
-    console.log(`🚀 ~ getPosts ~ error`, error);
+    console.error('Error occurred while fetching post previews: ', error);
+    return [];
   }
 };
 
@@ -64,7 +66,7 @@ export const getSinglePost = throttle(
       const { posts } = await hygraph.request(query, slugName);
       return posts[0];
     } catch (error) {
-      console.log(`🚀 ~ getPosts ~ error`, error);
+      console.log(`error getting single post: `, error);
     }
   }
 );
@@ -92,7 +94,7 @@ export const getLatestPostPreview = async () => {
 
     return posts[0];
   } catch (error) {
-    console.log(`🚀 ~ getPosts ~ error`, error);
+    console.error(`error getting latest post: `, error);
   }
 };
 
@@ -110,6 +112,6 @@ export const getAllSlugs = async () => {
       await hygraph.request(query);
     return slugs;
   } catch (error) {
-    console.log(`🚀 ~ getPosts ~ error`, error);
+    console.error(`error getting all slugs: `, error);
   }
 };

@@ -36,3 +36,7 @@ yarn-error.log*
 next-env.d.ts
 
 .vscode
+
+# Ignore test-related files
+/coverage.data
+/coverage/
