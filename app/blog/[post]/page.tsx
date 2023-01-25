@@ -20,6 +20,7 @@ export async function generateStaticParams() {
 
 const postPage = async ({ params }: { params: { post: string } }) => {
   const post = await getSinglePost(params.post);
+
   if (post) {
     const content = post.content;
     let source;
@@ -35,7 +36,7 @@ const postPage = async ({ params }: { params: { post: string } }) => {
       });
     } catch (error) {
       source = await serialize(
-        `error serializing content there is something wrong with markdown`
+        `error serializing content, there is something wrong with provided markdown`
       );
     }
     return (

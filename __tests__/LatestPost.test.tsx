@@ -1,4 +1,5 @@
 import { LatestPost } from '../app/components/latestPost/LatestPost';
+import { dateToLongMonthFormat } from '../lib/helpers';
 import { getAllPostsPreviews } from '../lib/hygraphHelpers';
 import { render } from '../test-utils';
 import './matchMedia.mock';
@@ -33,17 +34,26 @@ jest.mock('../lib/hygraphHelpers', () => {
 describe('Latest Post', () => {
   test('should render correctly with latestDataProps', async () => {
     const frontendPostsData = await getAllPostsPreviews('frontend');
+
     const titleFromFunction = frontendPostsData[0].title;
-    // const dateFromFunction = frontendPostsData[0].datePublished;
-    // const excerptFromFunction = frontendPostsData[0].excerpt;
-    const { getByRole, debug } = render(
+    const dateFromFunction = frontendPostsData[0].datePublished;
+    const excerptFromFunction = frontendPostsData[0].excerpt;
+
+    const { getByRole, getByText } = render(
       <LatestPost latestPostData={frontendPostsData[0]} />
     );
+
     const titleFromElement = getByRole('heading', { name: titleFromFunction });
-    // const dateFromElement =
-    // const excerptFromElement = getByRole('heading', { name: titleFromFunction });
     expect(titleFromElement).toBeInTheDocument();
-    debug();
+
+    const dateFromElement = getByText(dateToLongMonthFormat(dateFromFunction));
+    expect(dateFromElement).toBeInTheDocument();
+
+    const excerptFromElement = getByText(excerptFromFunction);
+    expect(excerptFromElement).toBeInTheDocument();
+
+    const image = getByRole('img');
+    expect(image).toBeInTheDocument();
   });
 
   test('should contain link to blog post', async () => {

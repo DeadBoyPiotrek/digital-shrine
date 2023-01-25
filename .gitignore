@@ -40,3 +40,6 @@ next-env.d.ts
 # Ignore test-related files
 /coverage.data
 /coverage/
+/test-results/
+/playwright-report/
+/playwright/.cache/
