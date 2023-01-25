@@ -30,15 +30,19 @@ jest.mock('../lib/hygraphHelpers', () => {
   };
 });
 
-describe('AllPosts', () => {
+describe('Latest Post', () => {
   test('should render correctly with latestDataProps', async () => {
     const frontendPostsData = await getAllPostsPreviews('frontend');
-    const title = frontendPostsData[0].title;
+    const titleFromFunction = frontendPostsData[0].title;
+    // const dateFromFunction = frontendPostsData[0].datePublished;
+    // const excerptFromFunction = frontendPostsData[0].excerpt;
     const { getByRole, debug } = render(
       <LatestPost latestPostData={frontendPostsData[0]} />
     );
-    const post = getByRole('heading', { name: title });
-    expect(post).toBeInTheDocument();
+    const titleFromElement = getByRole('heading', { name: titleFromFunction });
+    // const dateFromElement =
+    // const excerptFromElement = getByRole('heading', { name: titleFromFunction });
+    expect(titleFromElement).toBeInTheDocument();
     debug();
   });
 
@@ -51,6 +55,4 @@ describe('AllPosts', () => {
     const link = getByRole('link');
     expect(link).toHaveAttribute('href', `/blog/${slug}`);
   });
-
-  test('should redirect to blog post after clicking', () => {});
 });
