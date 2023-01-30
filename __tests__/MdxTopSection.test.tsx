@@ -27,9 +27,7 @@ describe('MdxTopSection', () => {
     if (!post) {
       console.error('not post provided');
     } else {
-      const { debug, getByRole, getByText } = render(
-        <MdxTopSection post={post} />
-      );
+      const { getByRole, getByText } = render(<MdxTopSection post={post} />);
 
       const title = getByRole('heading', { level: 1 });
       expect(title).toBeInTheDocument();
@@ -42,8 +40,6 @@ describe('MdxTopSection', () => {
 
       const image = getByRole('img');
       expect(image).toBeInTheDocument();
-
-      debug();
     }
   });
 });

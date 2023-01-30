@@ -21,7 +21,5 @@ describe('Nav', () => {
 
     const themeSwitcher = getByLabelText('theme switcher');
     expect(themeSwitcher).toBeInTheDocument();
-
-    debug();
   });
 });

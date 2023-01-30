@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "test": "jest --watch"
+    "jest": "jest --watch",
+    "e2e": "npx playwright test",
+    "test": "npm run e2e && npm run jest",
+    "gen": "npx playwright codegen"
   },
   "dependencies": {
     "@mdx-js/react": "^2.1.5",
@@ -46,6 +49,7 @@
     "jest-playwright-preset": "^3.0.1",
     "msw": "^0.49.3",
     "playwright": "^1.30.0",
+    "playwright-cli": "^0.180.0",
     "prettier": "^2.7.1",
     "ts-jest": "^29.0.5"
   }
