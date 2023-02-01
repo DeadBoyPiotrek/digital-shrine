@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "jest": "jest --watch",
+    "jest": "jest",
+    "jestWatch": "jest --watch",
     "e2e": "npx playwright test",
     "test": "npm run e2e && npm run jest",
     "gen": "npx playwright codegen"
