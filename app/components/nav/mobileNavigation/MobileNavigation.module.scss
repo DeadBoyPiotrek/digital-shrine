@@ -8,11 +8,8 @@
   align-items: center;
   justify-content: center;
   background: rgba(56, 56, 56, 0.315);
-  // display: none;
+  display: flex;
   z-index: 2;
-  @include media-query-1024 {
-    display: flex;
-  }
   backdrop-filter: blur(5px);
 }
 .nav {

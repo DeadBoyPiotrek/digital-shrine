@@ -3,7 +3,7 @@ import { render } from '../test-utils';
 import './matchMedia.mock';
 describe('Nav', () => {
   test('should render correctly all the nav elements', () => {
-    const { debug, getByRole, getByLabelText } = render(<Nav />);
+    const { getByRole, getByLabelText } = render(<Nav />);
 
     const mainPageLink = getByRole('link', {
       name: 'digital-shrine.dev digital-shrine.dev',

@@ -1,0 +1,7 @@
+{
+  "stopOnEntry": false,
+  "diagnosticLogging": true,
+  "sourceMaps": true,
+  "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+  "showAsyncStacks": true
+}
