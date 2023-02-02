@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('Small Post Test', async ({ page }) => {
+test('small post should redirect to requested url', async ({ page }) => {
   // Go to the Frontend page
   await page.goto('http://localhost:3000/');
   await page.getByRole('link', { name: 'Frontend Frontend' }).click();
