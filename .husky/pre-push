@@ -1,8 +1,12 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run build
+branch="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$branch" = "dev" ]; then
+	echo "whatever branch is special, blabla..."
+	npm run build
 
-nohup npm run start &
+    nohup npm run start &
 
-npm run test
+    npm run test
+fi
