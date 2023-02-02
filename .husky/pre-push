@@ -2,11 +2,17 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 branch="$(git rev-parse --abbrev-ref HEAD)"
-if [ "$branch" = "dev" ]; then
-	echo "whatever branch is special, blabla..."
+if [ "$branch" = "main" ]; then
+	echo "on main branch: building -> starting localhost -> e2e testing -> unit/integration testing -> pushing"
 	npm run build
 
     nohup npm run start &
 
     npm run test
+fi
+
+
+if [ "$branch" = "dev" ]; then
+	echo "on dev branch: building -> pushing"
+	npm run build
 fi
