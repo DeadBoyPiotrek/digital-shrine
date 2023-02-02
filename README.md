@@ -20,7 +20,7 @@
 
   <br/>
 
-## Installation
+## Installation 🚀
 
 #
 
@@ -42,13 +42,42 @@
    npm run dev
    ```
 
-#
+<br/>
 
-Add webhooks to automatically build your project on specific action e.g. adding new post. 👍
+## Add webhooks to automatically build your project on specific action e.g. adding new post. 👍
+
+#
 
 ![vercel hook](./public/readme/vercelHook.png)
 
 ![hygraph hook](./public/readme/hygraphHook.jpg)
+
+<br/>
+
+## Testing testing one two three ✅
+
+#
+
+### Testing commands:
+
+```
+ "jest": "jest",
+ "jestWatch": "jest --watch",
+ "e2e": "npx playwright test",
+ "test": "npm run e2e && npm run jest",
+```
+
+### Don't want to test on every push ? ⬇️
+
+### Replace `pre-push` with `pre-push.copy` in:
+
+```
+.
+└── .husky
+    └── folder
+        ├── pre-push
+        └── pre-push.copy
+```
 
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
