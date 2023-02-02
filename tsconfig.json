@@ -25,8 +25,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/frontend/[slug]",
-    "e2e/demo-todo-app._testts"
+    "app/frontend/[slug]"
   ],
   "exclude": ["node_modules"]
 }
