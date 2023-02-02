@@ -74,9 +74,8 @@
 ```
 .
 └── .husky
-    └── folder
-        ├── pre-push
-        └── pre-push.copy
+    ├── pre-push
+    └── pre-push.copy
 ```
 
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
