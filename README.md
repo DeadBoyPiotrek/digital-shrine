@@ -67,16 +67,15 @@
  "test": "npm run e2e && npm run jest",
 ```
 
-### Don't want to test on every push ? ⬇️
+### Don't want to test on every main branch push ? ⬇️
 
 ### Replace `pre-push` with `pre-push.copy` in:
 
 ```
 .
 └── .husky
-    └── folder
-        ├── pre-push
-        └── pre-push.copy
+      ├── pre-push
+      └── pre-push.copy
 ```
 
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
