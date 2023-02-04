@@ -1,4 +1,5 @@
 import { Poppins } from '@next/font/google';
+import ScrollUp from '../lib/pageScroolFix';
 import { Footer } from './components/footer/Footer';
 import { MobileNavigation } from './components/nav/mobileNavigation/MobileNavigation';
 import { Nav } from './components/nav/Nav';
@@ -22,6 +23,7 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
+          <ScrollUp />
           <Nav />
           {children}
           <Footer />

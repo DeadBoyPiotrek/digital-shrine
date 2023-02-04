@@ -6,7 +6,7 @@ if [ "$branch" = "main" ]; then
 	echo "on main branch: building -> starting localhost -> e2e testing -> unit/integration testing -> pushing"
 	npm run build
 
-    nohup npm run start &
+    nohup npm run start > /dev/null 2>&1 &
 
     npm run test
 fi
