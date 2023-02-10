@@ -1,10 +1,10 @@
+import MDXContent from '@/components/mdx/MdxArticle';
+import { MdxTopSection } from '@/components/mdx/MdxTopSection';
 import 'highlight.js/styles/atom-one-dark.css';
 import { serialize } from 'next-mdx-remote/serialize';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeSlug from 'rehype-slug';
-import MDXContent from '../../components/mdx/MdxArticle';
-import { MdxTopSection } from '../../components/mdx/MdxTopSection';
 
 import { getAllSlugs, getSinglePost } from '../../../lib/hygraphHelpers';
 import styles from './page.module.scss';

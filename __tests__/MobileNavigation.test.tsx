@@ -1,4 +1,4 @@
-import { MobileNavigation } from '../app/components/nav/mobileNavigation/MobileNavigation';
+import { MobileNavigation } from '@/components/nav/mobileNavigation/MobileNavigation';
 import { render } from '../test-utils';
 import './matchMedia.mock';
 

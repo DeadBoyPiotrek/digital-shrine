@@ -15,7 +15,11 @@ jest.mock('../lib/hygraphHelpers', () => {
         datePublished: '2022-12-16',
         excerpt:
           'Using TypeScript with React can improve the reliability, readability, ',
-        img: { url: 'https://media.graphassets.com/rmfkdArRtOYJS8luMk0K' },
+        img: {
+          url: 'https://media.graphassets.com/rmfkdArRtOYJS8luMk0K',
+          width: 1000,
+          height: 500,
+        },
       });
     }),
   };

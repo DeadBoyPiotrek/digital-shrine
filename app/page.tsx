@@ -1,6 +1,6 @@
+import { LatestPost } from '@/components/latestPost/LatestPost';
+import { getLatestPostPreview } from '@/lib/hygraphHelpers';
 import Image from 'next/image';
-import { getLatestPostPreview } from '../lib/hygraphHelpers';
-import { LatestPost } from './components/latestPost/LatestPost';
 import styles from './page.module.scss';
 const indexPage = async () => {
   const post = await getLatestPostPreview();
@@ -28,7 +28,7 @@ const indexPage = async () => {
               .
               <br />
             </h1>
-            <h2>
+            <p>
               <span className={`${styles.blue} ${styles.bold}`}>
                 Digital Shrine
               </span>{' '}
@@ -40,7 +40,7 @@ const indexPage = async () => {
               and<span className={styles.bold}> Backend </span>
               pages. <br />
               Who knows, maybe you&apos;ll even like something.
-            </h2>
+            </p>
           </div>
         </div>
 

@@ -1,8 +1,9 @@
-import { HamburgerNav } from './hamburgerNav/HamburgerNav';
+// import { HamburgerNav } from './hamburgerNav/HamburgerNav';
+import { ThemeSwitcher } from '@/components/nav//themeSwitcher/ThemeSwitcher';
+import { HamburgerNav } from '@/components/nav/hamburgerNav/HamburgerNav';
+import { NavLinks } from '@/components/nav/navLinks/NavLinks';
 import { Logo } from './logo/Logo';
 import styles from './Nav.module.scss';
-import { NavLinks } from './navLinks/NavLinks';
-import { ThemeSwitcher } from './themeSwitcher/ThemeSwitcher';
 
 export const Nav = () => {
   return (

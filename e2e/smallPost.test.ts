@@ -3,11 +3,11 @@ import { expect, test } from '@playwright/test';
 test('small post should redirect to requested url', async ({ page }) => {
   // Go to the Frontend page
   await page.goto('http://localhost:3000/');
-  await page.getByRole('link', { name: 'Frontend Frontend' }).click();
+  await page.getByRole('link', { name: 'Frontend' }).click();
 
   // Get the first small post in Frontend page
   const firstSmallPostFrontend = await page.locator(
-    "//div[@class='AllPosts_wrapper__1sjzx']//a[1]"
+    "(//div[@class='AllPosts_wrapper__1sjzx']//a)[1]"
   );
 
   // Get the href of the first small post in Frontend page
@@ -22,11 +22,11 @@ test('small post should redirect to requested url', async ({ page }) => {
   await expect(page).toHaveURL(`http://localhost:3000${hrefFront}`);
 
   // Go to the Backend page
-  await page.getByRole('link', { name: 'Backend Backend' }).click();
+  await page.getByRole('link', { name: 'Backend' }).click();
 
   // Get the first small post in Backend page
   const firstSmallPostBackend = await page.locator(
-    "//div[@class='AllPosts_wrapper__1sjzx']//a[1]"
+    "(//div[@class='AllPosts_wrapper__1sjzx']//a)[1]"
   );
 
   // Get the href of the first small post in Backend page

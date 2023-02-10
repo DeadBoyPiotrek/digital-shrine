@@ -6,17 +6,17 @@ describe('Nav', () => {
     const { getByRole, getByLabelText } = render(<Nav />);
 
     const mainPageLink = getByRole('link', {
-      name: 'digital-shrine.dev digital-shrine.dev',
+      name: 'digital-shrine.dev',
     });
     expect(mainPageLink).toBeInTheDocument();
 
-    const frontendLink = getByRole('link', { name: 'Frontend Frontend' });
+    const frontendLink = getByRole('link', { name: 'Frontend' });
     expect(frontendLink).toBeInTheDocument();
 
-    const backendLink = getByRole('link', { name: 'Backend Backend' });
+    const backendLink = getByRole('link', { name: 'Backend' });
     expect(backendLink).toBeInTheDocument();
 
-    const aboutLink = getByRole('link', { name: 'About About' });
+    const aboutLink = getByRole('link', { name: 'About' });
     expect(aboutLink).toBeInTheDocument();
 
     const themeSwitcher = getByLabelText('theme switcher');

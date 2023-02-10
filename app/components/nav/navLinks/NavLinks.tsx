@@ -1,33 +1,24 @@
+import { mobileNavigationLinks } from '@/lib/helpers';
 import Link from 'next/link';
-
 import styles from './NavLinks.module.scss';
+
+const navigationLinks = mobileNavigationLinks.slice(1);
+
 export const NavLinks = () => {
   return (
     <>
-      <li className={styles.listItem}>
-        <Link href="/frontend">
-          <div className={styles.link}>
-            <span className={styles.main}>Frontend</span>
-            <span className={styles.second}>Frontend</span>
-          </div>
-        </Link>
-      </li>
-      <li className={styles.listItem}>
-        <Link href="/backend">
-          <div className={styles.link}>
-            <span className={styles.main}>Backend</span>
-            <span className={styles.second}>Backend</span>
-          </div>
-        </Link>
-      </li>
-      <li className={styles.listItem}>
-        <Link href="/about-me">
-          <div className={styles.link}>
-            <span className={styles.main}>About</span>
-            <span className={styles.second}>About</span>
-          </div>
-        </Link>
-      </li>
+      {navigationLinks.map(link => (
+        <li className={styles.listItem} key={link.href}>
+          <Link href={link.href}>
+            <div className={styles.link}>
+              <span className={styles.main}>{link.label}</span>
+              <span aria-hidden="true" className={styles.second}>
+                {link.label}
+              </span>
+            </div>
+          </Link>
+        </li>
+      ))}
     </>
   );
 };

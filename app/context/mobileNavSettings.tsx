@@ -1,4 +1,4 @@
-import { createContext, FC, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 interface Props {
   children: React.ReactNode;
@@ -6,7 +6,7 @@ interface Props {
 
 const SettingsContext = createContext<SettingsContextData | null>(null);
 
-export const MobileNavSettingsProvider: FC<Props> = ({ children }) => {
+export const MobileNavSettingsProvider = ({ children }: Props) => {
   const value = useProviderSettings();
   return (
     <SettingsContext.Provider value={value}>

@@ -1,15 +1,12 @@
-import { getAllPostsPreviews } from '../../lib/hygraphHelpers';
-import { AllPosts } from '../components/allPosts/AllPosts';
-import { LatestPost } from '../components/latestPost/LatestPost';
+import { AllPosts } from '@/components/allPosts/AllPosts';
+import { LatestPost } from '@/components/latestPost/LatestPost';
+import { getAllPostsPreviews } from '@/lib/hygraphHelpers';
 import styles from './page.module.scss';
 
 const frontendPage = async () => {
   const posts = await getAllPostsPreviews('frontend');
 
-  if (!posts) {
-    return <div> error getting posts 😓</div>;
-  }
-  if (posts.length == 0) {
+  if (!posts || posts.length == 0) {
     return <div> error getting posts 😓</div>;
   }
 

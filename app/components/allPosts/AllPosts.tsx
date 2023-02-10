@@ -1,6 +1,6 @@
-import { removeFirstPost } from '../../../lib/helpers';
-import { PostPreviewProps } from '../../../types/types';
-import { SmallPost } from '../smallPost/SmallPost';
+import { SmallPost } from '@/components/smallPost/SmallPost';
+import { removeFirstPost } from '@/lib/helpers';
+import { PostPreviewProps } from '@/types/types';
 import styles from './AllPosts.module.scss';
 interface FrontendPostsData {
   frontendPostsData: PostPreviewProps[];

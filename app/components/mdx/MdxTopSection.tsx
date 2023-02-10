@@ -1,8 +1,8 @@
+import { dateToLongMonthFormat } from '@/lib/helpers';
 import Image from 'next/image';
-import { dateToLongMonthFormat } from '../../../lib/helpers';
 import styles from './MdxTopSection.module.scss';
 
-import { PostProps } from '../../../types/types';
+import { PostProps } from '@/types/types';
 
 export const MdxTopSection = ({ post }: { post: PostProps }) => {
   return (
@@ -10,9 +10,9 @@ export const MdxTopSection = ({ post }: { post: PostProps }) => {
       <span className={styles.title}>
         <h1>{post.title}</h1>
       </span>
-      <span className={styles.datePublished}>
+      <time className={styles.datePublished}>
         {dateToLongMonthFormat(post.datePublished)}
-      </span>
+      </time>
       <div className={styles.image}>
         <Image
           src={post.img.url}

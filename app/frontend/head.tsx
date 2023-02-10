@@ -6,7 +6,6 @@ export default async function Head() {
         name="description"
         content="Posts about frontend coding and stuff"
       />
-      <link rel="icon" href="/favicon.ico" />
     </>
   );
 }

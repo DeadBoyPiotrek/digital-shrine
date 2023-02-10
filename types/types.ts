@@ -6,6 +6,8 @@ export type PostProps = {
   readonly excerpt: string;
   readonly datePublished: string;
   readonly img: {
+    readonly width: number;
+    readonly height: number;
     readonly url: string;
   };
 };
@@ -18,5 +20,7 @@ export type PostPreviewProps = {
   readonly datePublished: string;
   readonly img: {
     readonly url: string;
+    readonly width: number;
+    readonly height: number;
   };
 };

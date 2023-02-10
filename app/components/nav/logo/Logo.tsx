@@ -6,7 +6,9 @@ export const Logo = () => {
       <Link href="/">
         <div className={`${styles.link} ${styles.logo}`}>
           <span className={styles.main}>digital-shrine.dev</span>
-          <span className={styles.second}>digital-shrine.dev</span>
+          <span aria-hidden="true" className={styles.second}>
+            digital-shrine.dev
+          </span>
         </div>
       </Link>
     </li>

@@ -1,6 +1,6 @@
+import { PostPreviewProps, PostProps } from '@/types/types';
 import { gql, GraphQLClient } from 'graphql-request';
 import pThrottle from 'p-throttle';
-import { PostPreviewProps, PostProps } from '../types/types';
 
 const hygraphApiKey = process.env.NEXT_PUBLIC_HYGRAPH_API_KEY;
 // @ts-ignore:
@@ -26,6 +26,8 @@ export const getAllPostsPreviews = async (category: Category) => {
           excerpt
           datePublished
           img {
+            width
+            height
             url
           }
         }
@@ -55,6 +57,8 @@ export const getSinglePost = throttle(
           datePublished
           excerpt
           img {
+            width
+            height
             url
           }
         }
@@ -81,6 +85,8 @@ export const getLatestPostPreview = async () => {
         excerpt
         datePublished
         img {
+          width
+          height
           url
         }
       }
